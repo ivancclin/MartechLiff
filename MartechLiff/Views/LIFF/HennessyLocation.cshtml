@@ -1,0 +1,15 @@
+﻿@model MartechLiff.Model.HennessyLocationView
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js?"></script>
+@section Scripts{
+    <script>
+        $(function() {
+            liff.init({ liffId: '@Model.LiffId' })
+                .then(() => {
+                    window.location.href = "http://stackoverflow.com";
+                })
+                .catch((err) => {
+                    console.log(err.code, err.message);
+                });
+        });
+    </script>
+}

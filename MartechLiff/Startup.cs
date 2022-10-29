@@ -48,6 +48,9 @@ namespace MartechLiff
                 endpoints.MapControllerRoute(
                   name: "default",
                   pattern: "{controller=Index}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                 name: "activity",
+                 pattern: "{controller=activity}/{action=Index}/{id?}");
             });
         }
     }

@@ -204,14 +204,15 @@ h4 {
 }
 
 .fix-content {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  background: #1a230d;
-  color: #fff;
-  font-size: 38px;
-  text-align: center;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #1a230d;
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
 }
 
 .fix-content .fix-slogan {

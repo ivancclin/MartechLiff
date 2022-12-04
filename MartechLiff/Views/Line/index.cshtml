@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js?"></script>
+    <script>
+        $(function () {
+
+            var u = navigator.userAgent,
+                ua = navigator.userAgent.toLowerCase(),
+                isLineApp = u.indexOf("Line") > -1, // Line 內建瀏覽器
+                isFbApp = u.indexOf("FBAV") > -1, // FB App 內建瀏覽器
+                isWeixinApp = ua.match(/MicroMessenger/i) == "micromessenger"; // 微信內建瀏覽器
+
+            if (isLineApp) {
+            }
+            else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+
+                window.location.href = "https://line.me/R/app/1657595136-W7ReR0zb";
+
+            }
+
+
+            liff.init({
+                liffId: '1657595136-W7ReR0zb'
+            }).then(() => {
+                if (!liff.isLoggedIn()) {
+                    console.log("你還沒登入Line哦！");
+                    LoggedIn();
+                } else {
+                    window.location.href = "https://d249-122-147-147-102.ngrok.io/line/ProcessLiff";
+                }
+            }).catch((err) => {
+                console.log('初始化失敗')
+            });
+        });
+
+        function LoggedIn() {
+            var redirectUrl = 'https://d249-122-147-147-102.ngrok.io/line/index';
+            liff.login({ redirectUri: redirectUrl });
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

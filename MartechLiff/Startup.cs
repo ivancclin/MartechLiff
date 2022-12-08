@@ -1,3 +1,4 @@
+using MartechLiff.Config;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +21,22 @@ namespace MartechLiff
         {
             services.AddRazorPages();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+            //LINE相關資訊
+            services.AddSingleton<LineBotConfig, LineBotConfig>((s) => new LineBotConfig
+            {
+                channelSecret = Configuration["LineBot:channelSecret"],
+                accessToken = Configuration["LineBot:accessToken"]
+            });
+
+            services.AddHttpContextAccessor();
+            services.AddRazorPages();
+
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.AllowSynchronousIO = true;
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\content\laprairie\" />
     <Folder Include="wwwroot\css\moet\" />
     <Folder Include="wwwroot\js\moet\" />
   </ItemGroup>

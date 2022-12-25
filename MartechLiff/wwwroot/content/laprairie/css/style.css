@@ -1,0 +1,673 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@font-face {
+  font-family: LaPrairie;
+  src: url(../font/LaPrairie-Light.woff2) format("woff2"), url(../font/LaPrairie-Light.woff) format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img,
+object,
+embed,
+video {
+  max-width: 100%;
+}
+
+body {
+  position: relative;
+  background: #000308;
+  color: #2f3335;
+  font-family: LaPrairie, "微軟正黑體", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  letter-spacing: .04em;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+p {
+  line-height: 1.4;
+  margin: 0;
+}
+
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.all-content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.LaPrairie {
+  text-transform: uppercase;
+}
+
+.welcome {
+  position: relative;
+  background: url(../images/kv.jpg) no-repeat center top/cover;
+  height: 1515px;
+  padding-top: 90px;
+  color: #fff;
+}
+
+.welcome .container {
+  position: relative;
+  height: 100%;
+}
+
+.welcome .title {
+  margin-top: 165px;
+  font-size: 24px;
+}
+
+.welcome .title h1 {
+  text-transform: uppercase;
+  font-size: 2.4em;
+  letter-spacing: .1em;
+  text-shadow: 0 0 15px #fff;
+}
+
+.welcome .title h2 {
+  font-size: 1.75em;
+  margin: 0;
+  margin-top: 60px;
+}
+
+.welcome .title p {
+  letter-spacing: .05em;
+}
+
+.welcome .line {
+  position: absolute;
+  width: 1px;
+  height: 7vw;
+  top: 57%;
+  left: 50%;
+  background: #a4a4a4;
+}
+
+.welcome .intro {
+  position: absolute;
+  width: 90%;
+  top: 76.5%;
+  left: 5%;
+  text-align: center;
+}
+
+.welcome .intro p {
+  max-width: 710px;
+  margin: 0 auto;
+  color: #bbbbbb;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.gift {
+  font-size: 20px;
+  color: #bbbbbb;
+  padding: 6rem 0;
+  background: url(../images/gift__bg.jpg) no-repeat center/cover;
+}
+
+.gift .col-md-6:last-child {
+  margin-top: 40px;
+}
+
+.gift .wrapper {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.gift h3 {
+  font-size: 1.4em;
+  color: #fff;
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.gift h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #2566c5;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(37, 102, 197, 0)), color-stop(50%, #2566c5), to(rgba(37, 102, 197, 0)));
+  background: linear-gradient(90deg, rgba(37, 102, 197, 0) 0%, #2566c5 50%, rgba(37, 102, 197, 0) 100%);
+}
+
+.gift p {
+  margin-top: 10px;
+}
+
+.gift p i {
+  display: block;
+}
+
+.shop {
+  padding: 6rem 0;
+  background: #e5e5e5;
+  background: -webkit-gradient(linear, left top, right top, from(#e5e5e5), color-stop(50%, white), to(#e5e5e5));
+  background: linear-gradient(90deg, #e5e5e5 0%, white 50%, #e5e5e5 100%);
+  font-size: 17px;
+}
+
+.shop .title {
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.shop .title::after {
+  content: '';
+  position: absolute;
+  width: 44px;
+  left: 50%;
+  margin-left: -22px;
+  bottom: 0;
+  border-top: 1px solid;
+}
+
+.shop .title h4 {
+  font-size: 26px;
+}
+
+.shop .shopList {
+  max-width: 840px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px 30px;
+}
+
+.shop .shopList li {
+  width: calc(50% - 15px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shop .shopList li > * {
+  line-height: 1.2;
+}
+
+.shop .shopList .sl__t {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.shop .shopList a.line {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/line-grey.svg) no-repeat 0 0/60px auto;
+}
+
+.shop .shopList .sl__p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-left: 1px solid;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+.shop .shopList .sl__p a {
+  text-decoration: underline;
+}
+
+.note {
+  padding: 6rem 0;
+  background: #676767;
+  color: #dedede;
+}
+
+.note .title {
+  margin-bottom: 20px;
+}
+
+.note .title h4 {
+  display: inline-block;
+  padding: 2px 40px;
+  border: 1px solid;
+  font-size: 1.2em;
+}
+
+.note ol {
+  list-style-type: none;
+}
+
+.note ol li {
+  position: relative;
+  line-height: 1.4;
+  padding-left: 20px;
+}
+
+.note ol li::before {
+  content: '';
+  position: absolute;
+  width: .8em;
+  border-top: 1px solid;
+  left: 0;
+  top: 10px;
+}
+
+.note ol li:not(:first-child) {
+  margin-top: 10px;
+}
+
+.partner {
+  padding: 6rem 0 4rem;
+  background: url(../images/partner__bg.jpg) no-repeat right top/cover;
+  color: #dedede;
+}
+
+.partner .logoList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.partner .logoList .logo__cathaybk {
+  width: 280px;
+  height: 40px;
+  background: url(../images/logo-cathaybk.svg) no-repeat center/contain;
+}
+
+.partner .logoList .logo__LaPrairie {
+  width: 165px;
+  height: 40px;
+  background: url(../images/logo.svg) no-repeat center/contain;
+}
+
+.partner .logoList span {
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  margin: 0 20px;
+  height: 40px;
+}
+
+.partner h5 {
+  font-size: 21px;
+  letter-spacing: .05em;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.partner p {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.partner .ctl {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.partner .ctl a {
+  width: 480px;
+  max-width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  font-size: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.partner .ctl a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.partner .ctl img {
+  width: 30px;
+  height: 30px;
+}
+
+.wow.animated {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+            transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+            transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .welcome {
+    padding-top: 6.25vw;
+    height: 105vw;
+  }
+  .welcome .title {
+    margin-top: 11.45vw;
+  }
+  .welcome .title h2 {
+    margin-top: 4.16vw;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .welcome .title {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .welcome .logo img {
+    width: 160px;
+  }
+  .welcome .title {
+    font-size: 16px;
+  }
+  .welcome .intro p {
+    font-size: 17px;
+  }
+  .gift p i {
+    display: inline-block;
+  }
+  .gift p small {
+    display: block;
+  }
+  .shop .shopList {
+    display: block;
+    max-width: 430px;
+  }
+  .shop .shopList li {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .shop .shopList .sl__t {
+    text-align: right;
+    padding-right: 10px;
+  }
+  .partner {
+    background-position: 90% top;
+  }
+  .partner p {
+    max-width: 70%;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .shop .shopList a.line:hover {
+    background-position: -30px 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .welcome {
+    padding-top: 16vw;
+    height: 273vw;
+    background: url(../images/kv-m.jpg) no-repeat center top/cover;
+  }
+  .welcome .title {
+    margin-top: 100vw;
+    text-align: center;
+    font-size: 20px;
+  }
+  .welcome .title h1 {
+    font-size: 1.6em;
+    letter-spacing: .15em;
+  }
+  .welcome .line {
+    height: 14vw;
+  }
+  .welcome .intro {
+    width: 100%;
+    left: 0;
+    top: 82%;
+    text-align: left;
+    padding: 0 30px;
+  }
+  .welcome .intro p {
+    font-size: 18px;
+  }
+  .gift {
+    background: url(../images/gift__bg-m.jpg) no-repeat 70% bottom/cover;
+  }
+  .gift .col-md-6:not(:first-child) {
+    margin-top: 60px;
+  }
+  .gift .col-md-6:not(:first-child) .wrapper {
+    width: 65%;
+    margin-left: 0;
+  }
+  .gift .wrapper {
+    max-width: 100%;
+    text-align: left;
+  }
+  .gift h3 {
+    margin-bottom: 15px;
+  }
+  .gift h3::after {
+    background: #2566c5;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #2566c5), to(rgba(37, 102, 197, 0)));
+    background: linear-gradient(90deg, #2566c5 50%, rgba(37, 102, 197, 0) 100%);
+  }
+  .shop {
+    font-size: 15px;
+  }
+  .partner .logoList .logo__cathaybk {
+    width: 200px;
+    height: 30px;
+  }
+  .partner .logoList .logo__LaPrairie {
+    width: 124px;
+    height: 30px;
+  }
+  .partner .logoList span {
+    height: 30px;
+  }
+  .partner .ctl a {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container,
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .welcome {
+    padding-top: 10vw;
+  }
+  .welcome .logo img {
+    width: 30vw;
+  }
+  .welcome .title {
+    font-size: 3.85vw;
+  }
+  .gift {
+    font-size: 16px;
+  }
+  .partner {
+    font-size: 14px;
+    background: url(../images/partner__bg-m.jpg) no-repeat right top/cover;
+  }
+  .partner h5 {
+    margin-top: 13.88vw;
+  }
+  .partner .logoList .logo__cathaybk {
+    width: 34.72vw;
+    height: 5.2vw;
+  }
+  .partner .logoList .logo__LaPrairie {
+    width: 21.52vw;
+    height: 5.2vw;
+  }
+  .partner .logoList span {
+    height: 5.2vw;
+  }
+  .partner .ctl {
+    margin-top: 18vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .break_s {
+    display: block;
+    height: 0;
+    text-indent: -9999px;
+  }
+  .welcome .logo img {
+    width: 35vw;
+  }
+  .welcome .intro p {
+    font-size: 16px;
+  }
+  .gift .col-md-6:not(:first-child) .wrapper {
+    width: 76%;
+  }
+  .shop .title h4 {
+    font-size: 21px;
+  }
+  .shop .title p {
+    line-height: 1.2;
+  }
+  .shop .title p:last-child {
+    margin-top: 10px;
+  }
+  .shop .shopList {
+    font-size: 14px;
+  }
+  .shop .shopList .sl__t {
+    width: 46%;
+  }
+  .partner .ctl a {
+    font-size: 18px;
+  }
+  .partner .ctl a img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media only screen and (max-width: 405px) {
+  .shop .shopList .sl__t {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .welcome .intro {
+    top: 80%;
+  }
+  .welcome .intro p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .shop .shopList {
+    font-size: 13px;
+  }
+  .shop .shopList .sl__p {
+    padding-left: 5px;
+    margin-left: 5px;
+  }
+  .shop .shopList a.line {
+    width: 26px;
+    height: 26px;
+    background-size: 52px auto;
+  }
+  .partner {
+    font-size: 12px;
+  }
+  .partner .ctl a {
+    font-size: 16px;
+  }
+  .partner .ctl a img {
+    width: 26px;
+    height: 26px;
+  }
+}

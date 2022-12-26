@@ -13,9 +13,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\content\laprairie\" />
     <Folder Include="wwwroot\css\moet\" />
     <Folder Include="wwwroot\js\moet\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\favicon.ico">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

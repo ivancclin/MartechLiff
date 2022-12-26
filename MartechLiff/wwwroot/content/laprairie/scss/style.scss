@@ -65,10 +65,7 @@ ul {
     text-align: justify;
 }
 
-.all-content {
-    max-width: 1440px;
-    margin: 0 auto;
-}
+.all-content {}
 
 .LaPrairie {
     text-transform: uppercase;
@@ -77,7 +74,7 @@ ul {
 .welcome {
     position: relative;
     background: url(../images/kv.jpg) no-repeat center top / cover;
-    height: 1515px;
+    height: 105vw;
     padding-top: 90px;
     color: #fff;
     .container {
@@ -130,7 +127,11 @@ ul {
     font-size: 20px;
     color: #bbbbbb;
     padding: 6rem 0;
-    background: url(../images/gift__bg.jpg) no-repeat center / cover;
+    background-color: #080b15;
+    background: url(../images/gift__bg-1.png), url(../images/gift__bg-2.png);
+    background-repeat: no-repeat;
+    background-position: 110% bottom, 0 0;
+    background-size: 473px auto, cover;
     .col-md-6:last-child {
         margin-top: 40px;
     }
@@ -157,9 +158,9 @@ ul {
     }
     p {
         margin-top: 10px;
-        i {
-            display: block;
-        }
+    }
+    .break__2 {
+        display: block;
     }
 }
 
@@ -217,6 +218,17 @@ ul {
             a {
                 text-decoration: underline;
             }
+        }
+    }
+    .company_contact {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        font-size: 1.1em;
+        a {
+            text-decoration: underline;
         }
     }
 }
@@ -343,13 +355,16 @@ ul {
 @media only screen and (max-width: 1440px) {
     .welcome {
         padding-top: 6.25vw;
-        height: 105vw;
         .title {
             margin-top: 11.45vw;
             h2 {
                 margin-top: 4.16vw;
             }
         }
+    }
+    .gift {
+        background-position: 115% bottom, 0 0;
+        background-size: 32.8% auto, cover;
     }
 }
 
@@ -371,12 +386,12 @@ ul {
             font-size: 17px;
         }
     }
-    .gift p {
-        i {
-            display: inline-block;
-        }
-        small {
-            display: block;
+    .gift {
+        background-size: 42% auto, cover;
+        p {
+            small {
+                display: block;
+            }
         }
     }
     .shop .shopList {
@@ -429,12 +444,26 @@ ul {
             text-align: left;
             padding: 0 30px;
             p {
+                position: relative;
                 font-size: 18px;
+                padding-left: 15px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    width: 5px;
+                    height: 5px;
+                    background: #fff;
+                    transform: rotate(45deg);
+                }
             }
         }
     }
     .gift {
-        background: url(../images/gift__bg-m.jpg) no-repeat 70% bottom/ cover;
+        background-image: url(../images/gift__bg-1.png), url(../images/gift__bg-2-m.png);
+        background-size: 60% auto, cover;
+        background-position: 145% bottom, 0 0;
         .col-md-6:not(:first-child) {
             margin-top: 60px;
             .wrapper {
@@ -452,6 +481,12 @@ ul {
                 background: rgb(37, 102, 197);
                 background: linear-gradient(90deg, rgba(37, 102, 197, 1) 50%, rgba(37, 102, 197, 0) 100%);
             }
+        }
+        .break__1 {
+            display: block;
+        }
+        .break__2 {
+            display: inline-block;
         }
     }
     .shop {
@@ -500,6 +535,10 @@ ul {
     .gift {
         font-size: 16px;
     }
+    .shop .company_contact {
+        display: block;
+        font-size: 1.2em;
+    }
     .partner {
         font-size: 14px;
         background: url(../images/partner__bg-m.jpg) no-repeat right top / cover;
@@ -539,8 +578,15 @@ ul {
             font-size: 16px;
         }
     }
-    .gift .col-md-6:not(:first-child) .wrapper {
-        width: 76%;
+    .gift {
+        background-size: 78% auto, cover;
+        background-position: 200% bottom, 0 0;
+        .col-md-6:not(:first-child) .wrapper {
+            width: 68%;
+        }
+        p small {
+            display: inline-block;
+        }
     }
     .shop {
         .title {
@@ -567,6 +613,9 @@ ul {
             width: 26px;
             height: 26px;
         }
+    }
+    .note {
+        font-size: 13px;
     }
 }
 

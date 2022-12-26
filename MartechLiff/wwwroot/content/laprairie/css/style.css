@@ -66,11 +66,6 @@ ul {
   text-align: justify;
 }
 
-.all-content {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 .LaPrairie {
   text-transform: uppercase;
 }
@@ -78,7 +73,7 @@ ul {
 .welcome {
   position: relative;
   background: url(../images/kv.jpg) no-repeat center top/cover;
-  height: 1515px;
+  height: 105vw;
   padding-top: 90px;
   color: #fff;
 }
@@ -139,7 +134,11 @@ ul {
   font-size: 20px;
   color: #bbbbbb;
   padding: 6rem 0;
-  background: url(../images/gift__bg.jpg) no-repeat center/cover;
+  background-color: #080b15;
+  background: url(../images/gift__bg-1.png), url(../images/gift__bg-2.png);
+  background-repeat: no-repeat;
+  background-position: 110% bottom, 0 0;
+  background-size: 473px auto, cover;
 }
 
 .gift .col-md-6:last-child {
@@ -175,7 +174,7 @@ ul {
   margin-top: 10px;
 }
 
-.gift p i {
+.gift .break__2 {
   display: block;
 }
 
@@ -254,6 +253,25 @@ ul {
 }
 
 .shop .shopList .sl__p a {
+  text-decoration: underline;
+}
+
+.shop .company_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+  font-size: 1.1em;
+}
+
+.shop .company_contact a {
   text-decoration: underline;
 }
 
@@ -422,13 +440,16 @@ ul {
 @media only screen and (max-width: 1440px) {
   .welcome {
     padding-top: 6.25vw;
-    height: 105vw;
   }
   .welcome .title {
     margin-top: 11.45vw;
   }
   .welcome .title h2 {
     margin-top: 4.16vw;
+  }
+  .gift {
+    background-position: 115% bottom, 0 0;
+    background-size: 32.8% auto, cover;
   }
 }
 
@@ -448,8 +469,8 @@ ul {
   .welcome .intro p {
     font-size: 17px;
   }
-  .gift p i {
-    display: inline-block;
+  .gift {
+    background-size: 42% auto, cover;
   }
   .gift p small {
     display: block;
@@ -506,10 +527,25 @@ ul {
     padding: 0 30px;
   }
   .welcome .intro p {
+    position: relative;
     font-size: 18px;
+    padding-left: 15px;
+  }
+  .welcome .intro p::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
   .gift {
-    background: url(../images/gift__bg-m.jpg) no-repeat 70% bottom/cover;
+    background-image: url(../images/gift__bg-1.png), url(../images/gift__bg-2-m.png);
+    background-size: 60% auto, cover;
+    background-position: 145% bottom, 0 0;
   }
   .gift .col-md-6:not(:first-child) {
     margin-top: 60px;
@@ -529,6 +565,12 @@ ul {
     background: #2566c5;
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #2566c5), to(rgba(37, 102, 197, 0)));
     background: linear-gradient(90deg, #2566c5 50%, rgba(37, 102, 197, 0) 100%);
+  }
+  .gift .break__1 {
+    display: block;
+  }
+  .gift .break__2 {
+    display: inline-block;
   }
   .shop {
     font-size: 15px;
@@ -572,6 +614,10 @@ ul {
   .gift {
     font-size: 16px;
   }
+  .shop .company_contact {
+    display: block;
+    font-size: 1.2em;
+  }
   .partner {
     font-size: 14px;
     background: url(../images/partner__bg-m.jpg) no-repeat right top/cover;
@@ -607,8 +653,15 @@ ul {
   .welcome .intro p {
     font-size: 16px;
   }
+  .gift {
+    background-size: 78% auto, cover;
+    background-position: 200% bottom, 0 0;
+  }
   .gift .col-md-6:not(:first-child) .wrapper {
-    width: 76%;
+    width: 68%;
+  }
+  .gift p small {
+    display: inline-block;
   }
   .shop .title h4 {
     font-size: 21px;
@@ -631,6 +684,9 @@ ul {
   .partner .ctl a img {
     width: 26px;
     height: 26px;
+  }
+  .note {
+    font-size: 13px;
   }
 }
 

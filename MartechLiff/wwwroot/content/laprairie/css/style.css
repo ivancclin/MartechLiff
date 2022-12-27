@@ -170,9 +170,9 @@ ul {
   background: linear-gradient(90deg, rgba(37, 102, 197, 0) 0%, #2566c5 50%, rgba(37, 102, 197, 0) 100%);
 }
 
-.gift p {
+/*.gift p {
   margin-top: 10px;
-}
+}*/
 
 .gift .break__2 {
   display: block;
